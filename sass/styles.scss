@@ -1,0 +1,155 @@
+@use "reset";
+@use "flex" as *;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+$Sof-red: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+
+$Dark-brown: hsl(25, 47%, 15%);
+$Medium-brown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$Very-pale-orange: hsl(33, 100%, 98%);
+$radius: 1rem;
+body, html {
+    min-height: 100vh;
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    @include flex(center, center);
+    background-color: $Cream;
+}
+.expenses {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+
+}
+.balance {
+    border-radius: $radius;
+    @include flex(space-between, center);
+    padding: 1rem;
+    background-color: $Sof-red;
+    color: $Very-pale-orange;
+    &__money {
+        font-weight: bold;
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        margin-top: .5rem;
+
+    }
+    &__logo {
+        animation: rotate-center 10s linear infinite both;
+    }
+}
+.graphics {
+    color: $Dark-brown;
+    border-radius: $radius;
+    background-color: $Very-pale-orange;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 2rem);
+
+    &__paragraph {
+        font-weight: bold;
+        font-size: clamp(1rem, 5vw, 2rem);
+    }
+}
+
+ 
+  @keyframes rotate-center {
+    0% {
+      
+              transform: rotate(0);
+    }
+    100% {
+      
+              transform: rotate(360deg);
+    }
+  }
+
+.graphs {
+    height: 250px;
+    @include flex(space-between, end);
+    gap: clamp(0rem, 3vw, 2rem);
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(110, 110, 110, 0.226);
+    &__days {
+        display: inline-block;
+        text-align: center;
+        font-size: clamp(.7rem, 3.5vw, 1rem);
+        width: max-content;
+    }
+    &__wrapper {
+        @include flex(end, center);
+        flex-direction: column;
+        height: 100%
+    }
+    &__bar {
+        position: relative;
+        height: 10%;
+        min-width: clamp(30px, 3vw, 50px);
+        transform: translateX(0%);
+        background-color: $Sof-red;
+        border-radius: clamp(.1rem, 1vw, .5rem);
+        cursor: pointer;
+        transition: .3s;
+        isolation: isolate;
+
+        &.today--bar:hover {
+            background-color: hsla(186, 34%, 60%, 0.596);
+        }
+        &:hover {
+            background-color: hsla(10, 79%, 65%, 0.541);
+        }
+        &:hover::after {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+            visibility: visible;
+        }
+
+        &::after {
+            padding: .5rem;
+            font-weight: bold;
+            color: $Very-pale-orange;
+            background-color: $Dark-brown;
+            transition: .2s;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            content: attr(money) "";
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%) scale(.1);
+            border-radius: calc($radius - .5rem);
+            font-size: clamp(.8rem, 2vw, 1rem)
+            
+            
+
+        }
+    }
+}
+
+.total {
+    gap: 3rem;
+    @include flex(space-between, center);
+    &__month {
+       font-size:clamp(.8rem, 3vw, 1rem) ; 
+    }
+    &__paragraph {
+        font-size:clamp(.8rem, 3vw, 1rem) ; 
+    }
+    &__money {
+        font-weight: bold;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+    &__percentage {
+        font-weight: bold;
+        text-align: end;
+    }
+}
+.grey--text {
+    color: $Medium-brown;
+}
+.today--bar {
+    background-color: $Cyan;
+}
