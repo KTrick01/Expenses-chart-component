@@ -116,7 +116,7 @@ body, html {
             position: absolute;
             opacity: 0;
             visibility: hidden;
-            content: attr(data-money) "";
+            content: attr(money) "";
             top: -50px;
             left: 50%;
             transform: translateX(-50%) scale(.1);

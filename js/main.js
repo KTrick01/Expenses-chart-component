@@ -6,7 +6,7 @@ fetch('./data.json')
        for (let i = 0; i < json.length; i++) {
         let bar = document.querySelector(`.graphs__bar-${weekday[i]}`)
         bar.style.height = `calc(${json[i].amount}% + 50px)`
-        bar.setAttribute('data-money', `$${json[i].amount}`)
+        bar.setAttribute('money', `$${json[i].amount}`)
        }
         
      });
