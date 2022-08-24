@@ -1,112 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/main.js"></script>
-  <title>Frontend Mentor | Expenses chart component</title>
-
-</head>
-
-<body>
-
-  <main class="expenses">
-
-    <div class="balance">
-      <div>
-        <p class="balance__paragraph">My balance</p>
-        <p class="balance__money"> $921.48</p>
-      </div>
-      <figure><img class="balance__logo" src="images/logo.svg" alt=""></figure>
-
-    </div>
-
-    <div class="graphics">
-
-      <h1 class="graphics__paragraph">Spending - Last 7 days</h1>
-
-      <div class="graphs">
-        <div class="graphs__wrapper">
-
-          <div class="graphs__bar graphs__bar-mon"></div>
-          <p class="graphs__days graphs__days-mon grey--text">mon</p>
-
-        </div>
-
-        <div class="graphs__wrapper">
-
-          <div class="graphs__bar graphs__bar-tue"></div>
-          <p class="graphs__days graphs__days-tue grey--text">tue</p>
-          
-        </div>
-
-        <div class="graphs__wrapper">
-
-          <div class="graphs__bar graphs__bar-wed"></div>
-          <p class="graphs__days graphs__days-wed grey--text">wed</p>
-          
-        </div>
-
-        <div class="graphs__wrapper">
-
-          <div class="graphs__bar graphs__bar-thu"></div>
-          <p class="graphs__days graphs__days-thu grey--text">thu</p>
-          
-        </div>
-        
-        <div class="graphs__wrapper">
-
-          <div class="graphs__bar graphs__bar-fri"></div>
-          <p class="graphs__days graphs__days-fri grey--text">fri</p>
-          
-        </div>
-        
-        <div class="graphs__wrapper">
-
-          <div class="graphs__bar graphs__bar-sat"></div>
-          <p class="graphs__days graphs__days-sat grey--text">sat</p>
-          
-        </div>
-
-        <div class="graphs__wrapper">
-
-          <div class="graphs__bar graphs__bar-sun"></div>
-          <p class="graphs__days graphs__days-sun grey--text">sun</p>
-          
-        </div>
-        
-        
-        
-        
-        
-        
-        
-
-      </div>
-
-      <div class="total">
-
+  <body>
+    <main class="expenses">
+      <div class="balance">
         <div>
-          <p class="total__paragraph grey--text">Total this month</p>
-          <p class="total__money">$478.33</p>
+          <p class="balance__paragraph">My balance</p>
+          <p class="balance__money">$921.48</p>
         </div>
-
-        <div >
-          <p class="total__percentage">+2.4%</p>
-          <p class="total__month grey--text">from last month</p>
-        </div>
-
+        <figure>
+          <img class="balance__logo" src="images/logo.svg" alt="" />
+        </figure>
       </div>
 
-    </div>
+      <div class="graphics">
+        <h1 class="graphics__paragraph">Spending - Last 7 days</h1>
 
-  </main>
+        <div class="graphs">
+          <div class="graphs__wrapper">
+            <div class="graphs__bar graphs__bar-mon"></div>
+            <p class="graphs__days graphs__days-mon grey--text">mon</p>
+          </div>
 
-</body>
+          <div class="graphs__wrapper">
+            <div class="graphs__bar graphs__bar-tue"></div>
+            <p class="graphs__days graphs__days-tue grey--text">tue</p>
+          </div>
 
+          <div class="graphs__wrapper">
+            <div class="graphs__bar graphs__bar-wed"></div>
+            <p class="graphs__days graphs__days-wed grey--text">wed</p>
+          </div>
+
+          <div class="graphs__wrapper">
+            <div class="graphs__bar graphs__bar-thu"></div>
+            <p class="graphs__days graphs__days-thu grey--text">thu</p>
+          </div>
+
+          <div class="graphs__wrapper">
+            <div class="graphs__bar graphs__bar-fri"></div>
+            <p class="graphs__days graphs__days-fri grey--text">fri</p>
+          </div>
+
+          <div class="graphs__wrapper">
+            <div class="graphs__bar graphs__bar-sat"></div>
+            <p class="graphs__days graphs__days-sat grey--text">sat</p>
+          </div>
+
+          <div class="graphs__wrapper">
+            <div class="graphs__bar graphs__bar-sun"></div>
+            <p class="graphs__days graphs__days-sun grey--text">sun</p>
+          </div>
+        </div>
+
+        <div class="total">
+          <div>
+            <p class="total__paragraph grey--text">Total this month</p>
+            <p class="total__money">$478.33</p>
+          </div>
+
+          <div>
+            <p class="total__percentage">+2.4%</p>
+            <p class="total__month grey--text">from last month</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
